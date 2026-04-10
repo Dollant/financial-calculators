@@ -47,7 +47,7 @@ public class Test {
                     FinancialCalculators.annuityPresentValue(pmt, r, y);
                     validChoice = true;
                 } else {
-                    System.out.println("Invalid choice silly! T.T || Please select 1, 2, or 3.");
+                    System.out.println("Invalid choice silly! T.T\nPlease select 1, 2, or 3.");
                 }
 
             } catch (InputMismatchException e) {
