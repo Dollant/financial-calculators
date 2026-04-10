@@ -6,6 +6,9 @@ public class Test {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
 
+        boolean validChoice = false;
+
+    while (!validChoice) {
         System.out.println("Select a calculator:");
         System.out.println("1. Mortgage Calculator");
         System.out.println("2. CD Future Value");
@@ -21,6 +24,7 @@ public class Test {
             System.out.print("Loan term (years): ");
             int y = keyboard.nextInt();
             FinancialCalculators.mortgageCalculator(p, r, y);
+            validChoice = true;
         } else if (choice == 2) {
             System.out.print("Deposit: ");
             double p = keyboard.nextDouble();
@@ -29,6 +33,7 @@ public class Test {
             System.out.print("Years: ");
             int y = keyboard.nextInt();
             FinancialCalculators.cdFutureValue(p, r, y);
+            validChoice = true;
         } else if (choice == 3) {
             System.out.print("Monthly payout: ");
             double pmt = keyboard.nextDouble();
@@ -37,9 +42,12 @@ public class Test {
             System.out.print("Years: ");
             int y = keyboard.nextInt();
             FinancialCalculators.annuityPresentValue(pmt, r, y);
+            validChoice = true;
+        } else {
+            System.out.println("Invalid choice silly! T.T || Please select 1, 2, or 3.");
         }
+    }
 
         keyboard.close();
-
     }
 }
