@@ -33,7 +33,6 @@ public static void mortgageCalculator(double principal, double annualRate, int y
 // Formula:
 //   FV = P * (1 + r/365)^(365 * years)
 // Total Interest Earned = FV - P
-
 public static void cdFutureValue(double principal, double annualRate, int years) {
     double r = annualRate;
     double FV = principal * Math.pow(1 + r / 365, 365 * years);
@@ -44,9 +43,24 @@ public static void cdFutureValue(double principal, double annualRate, int years)
 
     }
 
+// 3. Annuity Present Value Calculator
+// Calculates how much money must be invested today to fund a fixed monthly payout.
+// Inputs:
+//   monthlyPayout – amount paid out each month
+//   annualRate    – expected annual interest rate in decimal form
+//   years         – number of years the annuity will pay out
+// Formula:
+//   PV = PMT * (1 - (1 + i)^(-n)) / i
+//     where i = monthly interest rate (annualRate / 12)
+//           n = total number of payments (years * 12)
+public static void annuityPresentValue(double monthlyPayout, double annualRate, int years) {
+    double r = annualRate;
+    int n = years * 12;
+    double PV = monthlyPayout * (1 - Math.pow(1 + r, -n)) / r;
 
+    System.out.printf("Present Value Needed: %.2f%n", PV);
 
-
+    }
 
 
 
