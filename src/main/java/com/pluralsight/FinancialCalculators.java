@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.util.Scanner;
+
 public class FinancialCalculators {
 
 // 1. Mortgage Calculator
@@ -61,11 +63,6 @@ public static void annuityPresentValue(double monthlyPayout, double annualRate, 
     System.out.printf("Present Value Needed: %.2f%n", PV);
 
     }
-
-
-
-
-
 
     public static void main(String[] args) {
 
