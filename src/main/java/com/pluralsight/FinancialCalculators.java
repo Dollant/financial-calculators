@@ -63,36 +63,5 @@ public static void annuityPresentValue(double monthlyPayout, double annualRate, 
     System.out.printf("Present Value Needed: %.2f%n", PV);
 
     }
-
-public static void main(String[] args) {
-    Scanner keyboard = new Scanner(System.in);
-
-    System.out.println("Select a calculator:");
-    System.out.println("1. Mortgage Calculator");
-    System.out.println("2. CD Future Value");
-    System.out.println("3. Annuity Present Value");
-    System.out.print("Select Choice (1-3): ");
-    int choice = keyboard.nextInt();
-
-    if (choice == 1) {
-        System.out.print("Principal: ");         double p = keyboard.nextDouble();
-        System.out.print("Annual Rate: ");       double r = keyboard.nextDouble();
-        System.out.print("Loan term (years): "); int y = keyboard.nextInt();
-        mortgageCalculator(p, r ,y);
-    } else if (choice == 2) {
-        System.out.print("Deposit: ");      double p = keyboard.nextDouble();
-        System.out.print("Annual Rate: ");  double r = keyboard.nextDouble();
-        System.out.print("Years: ");        int y = keyboard.nextInt();
-        cdFutureValue(p, r ,y);
-    } else if (choice == 3) {
-        System.out.print("Monthly payout: "); double pmt = keyboard.nextDouble();
-        System.out.print("Annual Rate: ");    double r = keyboard.nextDouble();
-        System.out.print("Years: ");          int y = keyboard.nextInt();
-        annuityPresentValue(pmt, r ,y);
-    }
-
-    keyboard.close();
-
-    }
 }
 
