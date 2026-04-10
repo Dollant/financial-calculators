@@ -38,8 +38,8 @@ public static void cdFutureValue(double principal, double annualRate, int years)
     double FV = principal * Math.pow(1 + r / 365, 365 * years);
     double interest = FV - principal;
 
-    System.out.printf("Future Value:          %.2f%n", FV);
-    System.out.printf("Total Interest Earned: %.2f%n", interest);
+    System.out.printf("Future Value:          $%.2f%n", FV);
+    System.out.printf("Total Interest Earned: $%.2f%n", interest);
 
     }
 
